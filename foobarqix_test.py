@@ -34,10 +34,8 @@ class FooBarQixTestCase(unittest.TestCase):
     def test_return_FooBar_when_number_is_divisible_by_15(self):
         self.assertEqual(foobarqix(15), "FooBar")
 
-    def test_return_1_when_number_is_1(self):
+    def test_return_nomber_as_a_string_otherwise(self):
         self.assertEqual(foobarqix(1), "1")
-
-    def test_return_2_when_number_is_2(self):
         self.assertEqual(foobarqix(2), "2")
 
 
