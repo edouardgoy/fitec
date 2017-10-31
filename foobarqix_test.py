@@ -16,7 +16,7 @@ def foobarqix(number):
     if result != "":
         return result
     else:
-        return "1"
+        return str(number)
 
 
 class FooBarQixTestCase(unittest.TestCase):
@@ -36,6 +36,9 @@ class FooBarQixTestCase(unittest.TestCase):
 
     def test_return_1_when_number_is_1(self):
         self.assertEqual(foobarqix(1), "1")
+
+    def test_return_2_when_number_is_2(self):
+        self.assertEqual(foobarqix(2), "2")
 
 
 unittest.main()
