@@ -1,8 +1,12 @@
 import unittest
 
 
+def is_divisible(number, divisor):
+    return number % divisor == 0
+
+
 def foobarqix(number):
-    if number % 3 == 0:
+    if is_divisible(number, 3):
         return  "Foo"
     else:
         return "Bar"
