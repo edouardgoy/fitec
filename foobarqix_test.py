@@ -6,12 +6,14 @@ def is_divisible(number, divisor):
 
 
 def foobarqix(number):
+    result = ""
     if is_divisible(number, 3):
-        return  "Foo"
+        result += "Foo"
     if is_divisible(number, 5):
-        return  "Bar"
+        result += "Bar"
     if is_divisible(number, 7):
-        return  "Qix"
+        result += "Qix"
+    return result
 
 
 class FooBarQixTestCase(unittest.TestCase):
@@ -23,6 +25,9 @@ class FooBarQixTestCase(unittest.TestCase):
 
     def test_return_Qix_when_number_is_divisible_by_7(self):
         self.assertEqual(foobarqix(7), "Qix")
+
+    def test_return_FooBar_when_number_is_divisible_by_15(self):
+        self.assertEqual(foobarqix(15), "FooBar")
 
 
 unittest.main()
